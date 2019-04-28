@@ -9,34 +9,21 @@ class ScrollTest extends React.Component {
 
   constructor(props) {
     super(props);
-    this.landingPadRef = React.createRef();
-    this.starElementRef = React.createRef();
-  }
-
-  componentDidLoad() {
-    this.landingPadRef.current.addEventListener('load',this.landingPadLoaded);
-    this.starElementRef.current.addEventListener('load',this.starElementLoaded);
-  }
-
-  landingPadLoaded = () => {
-    console.log("Landing Pad Loaded");
-  }
-
-  starElementLoaded = () => {
-    console.log("Star Element Loaded");
+    this.landingRef = React.createRef();
+    this.targetRef = React.createRef();
   }
 
   render() {
     return (
         <div className="ScrollTest">
-          <LandingPad ref={this.landingPadRef}/>
+          <LandingPad ref={this.landingRef}/>
           <div className="row ScrollTestRow"><ShapeElement index={"0"}/></div>
           <div className="row ScrollTestRow"><ShapeElement index={"1"}/></div>
           <div className="row ScrollTestRow"><ShapeElement index={"2"}/></div>
           <div className="row ScrollTestRow"><ShapeElement index={"3"}/></div>
           <div className="row ScrollTestRow"><ShapeElement index={"4"}/></div>
           <div className="row ScrollTestRow"><ShapeElement index={"5"}/></div>
-          <div className="row ScrollTestRow" ref={this.starElementRef}><StarElement index={"6"}/></div>
+          <div className="row ScrollTestRow" ref={this.targetRef}><StarElement index={"6"}/></div>
           <div className="row ScrollTestRow"><ShapeElement index={"7"}/></div>
           <div className="row ScrollTestRow"><ShapeElement index={"8"}/></div>
           <div className="row ScrollTestRow"><ShapeElement index={"9"}/></div>

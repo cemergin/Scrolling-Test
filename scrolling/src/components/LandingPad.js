@@ -5,12 +5,13 @@ class LandingPad extends React.Component {
 
   constructor(props) {
     super(props);
-    this.landingPadReference = React.createRef();
+    this.divRef = React.createRef();
   }
 
   render() {
     return (
-      <div ref={this.landinPadReference} className="fixed column LandingPad" ></div>
+      <div ref="divRef" className="fixed column LandingPad" >
+      </div>
     );
   }
 
