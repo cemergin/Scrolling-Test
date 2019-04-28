@@ -23,12 +23,6 @@ class ScrollTest extends React.Component {
           <div className="row ScrollTestRow"><ShapeElement/></div>
           <div className="row ScrollTestRow"><ShapeElement/></div>
           <div className="row ScrollTestRow"><ShapeElement/></div>
-          <div className="row ScrollTestRow"><ShapeElement/></div>
-          <div className="row ScrollTestRow"><ShapeElement/></div>
-          <div className="row ScrollTestRow"><ShapeElement/></div>
-          <div className="row ScrollTestRow"><ShapeElement/></div>
-          <div className="row ScrollTestRow"><ShapeElement/></div>
-          <div className="row ScrollTestRow"><ShapeElement/></div>
         </div>
     );
   }
