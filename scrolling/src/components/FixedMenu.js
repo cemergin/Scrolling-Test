@@ -16,10 +16,10 @@ class FixedMenu extends React.Component {
 
   return (
           <div ref={this.menuRef} className="ui fixed inverted menu">
-            <div className="header item"> Scrolling Test: #{this.props.pageNum}</div>
-            <div className="item">Scroll Down To Place Xs Into The Yellow Area</div>
+            <div className="header item"> Scrolling Test: {this.props.pageNum}</div>
+            <div className="item">Press Start and Scroll Down To Place Xs Into The Yellow Area</div>
             <div className="right menu">
-              <button ref={this.buttonRef} onClick={this.props.onClickHandler} className="ui button">Start</button>
+              <button ref={this.buttonRef} onClick={this.props.onClickHandler} className="ui button">Click to Start</button>
             </div>
         </div>
   );
