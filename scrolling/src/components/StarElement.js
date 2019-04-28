@@ -3,7 +3,6 @@ import {Polyline,CornerBox} from 'react-shapes';
 import ShapeElementStyle from './ShapeElementStyle.css'
 import StarElementStyle from './StarElementStyle.css'
 
-
 class StarElement extends React.Component {
 
 constructor(props) {
@@ -20,7 +19,7 @@ constructor(props) {
   render(props) {
       const pos = parseInt(this.props.index) % 3;
       return (
-        <div ref={this.landinPadReference} className="ui relaxed grid">
+        <div ref={this.starElementReference} className="ui relaxed grid">
           <div className="two wide column"></div>
              <div className="four wide column ShapeElementStyle">
                 {this.randomShape()}

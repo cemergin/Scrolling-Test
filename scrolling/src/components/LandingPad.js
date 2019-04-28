@@ -5,7 +5,7 @@ class LandingPad extends React.Component {
 
   constructor(props) {
     super(props);
-    this.landingPadRefence = React.createRef();
+    this.landingPadReference = React.createRef();
   }
 
   render() {

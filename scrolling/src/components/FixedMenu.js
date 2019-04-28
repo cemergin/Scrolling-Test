@@ -1,27 +1,27 @@
 import React from 'react';
 
-// <a href="#" className="item">Home</a>
-// <div className="ui simple dropdown item">
-//   Dropdown <i className="dropdown icon"></i>
-//   <div className="menu">
-//     <a className="item" href="#">Link Item</a>
-//     <a className="item" href="#">Link Item</a>
-//     <div className="divider"></div>
-
 class FixedMenu extends React.Component {
 
-  render() {
+  constructor(props) {
+    super(props);
+    this.fixedMenuReference = React.createRef();
+    this.ButtonReference = React.createRef();
+  }
+
+  componentDidMount() {
+    this.ButtonReference.current.style.backgroundColor = "orange";
+  }
+
+  render(props) {
 
   return (
-      <div>
           <div className="ui fixed inverted menu" >
             <div className="header item">Scrolling Test: #</div>
-            <div className="item">Slorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis nibh iaculis sem varius placerat.</div>
+            <div className="item">Scroll Down To Place Xs Into The Yellow Area</div>
             <div className="right menu">
-              <button className="ui button">Button</button>
+              <button ref={this.ButtonReference} onClick={this.props.onClickHandler} className="ui button">Start</button>
             </div>
         </div>
-      </div>
   );
 }
 
