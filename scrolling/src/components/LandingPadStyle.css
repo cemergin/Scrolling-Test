@@ -1,0 +1,7 @@
+.LandingPad {
+  height: 150px;
+  width: 100%;
+  position: fixed;
+  background-color: yellow;
+  z-index: -1;
+}
