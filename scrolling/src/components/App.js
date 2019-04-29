@@ -65,7 +65,6 @@ handleScroll = event => {
     if(!this.testCompleted){
       this.testStarted = !this.testStarted;
       if (this.testStarted) {
-      console.log(this.fixedMenuReference.current.buttonRef);
       this.fixedMenuReference.current.buttonRef.current.style.backgroundColor = "green";
       this.fixedMenuReference.current.buttonRef.current.firstChild.nodeValue = "Running Test";
       this.testStartTime = Date.now();

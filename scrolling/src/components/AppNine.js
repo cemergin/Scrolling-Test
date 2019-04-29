@@ -44,7 +44,7 @@ handleScroll = event => {
         console.log("TIMER", result);
         this.handleButtonClick();
         this.testCompleted = true;
-        this.props.onComplete();        
+        this.props.onComplete();
       }
     }
 }
@@ -68,7 +68,6 @@ handleScroll = event => {
     if(!this.testCompleted){
       this.testStarted = !this.testStarted;
       if (this.testStarted) {
-      console.log(this.fixedMenuReference.current.buttonRef);
       this.fixedMenuReference.current.buttonRef.current.style.backgroundColor = "green";
       this.fixedMenuReference.current.buttonRef.current.firstChild.nodeValue = "Running Test";
       this.testStartTime = Date.now();
