@@ -17,6 +17,7 @@ class App extends React.Component {
     this.debounceAmount = 300;
     this.onChange = this.onChange.bind(this);
     this.debouncedOnChange = _.debounce(this.debouncedOnChange.bind(this), this.debounceAmount);
+
   }
 
 // Scroll Event Debounce Functions
@@ -40,6 +41,7 @@ handleScroll = event => {
         console.log("TIMER", result);
         this.handleButtonClick();
         this.testCompleted = true;
+        this.props.onComplete();
       }
     }
 }

@@ -1,0 +1,55 @@
+import React from 'react';
+import App from './App';
+import AppOne from './AppOne';
+import AppTwo from './AppTwo';
+import AppThree from './AppThree';
+import AppFour from './AppFour';
+import AppFive from './AppFive';
+import AppSix from './AppSix';
+import AppSeven from './AppSeven';
+import AppEight from './AppEight';
+import AppNine from './AppNine';
+import AppTen from './AppTen';
+import AppDone from './AppDone';
+
+class MainTest extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { num: 0 };
+  }
+
+  onComplete = () => {
+    const nmr = this.state.num + 1;
+    this.setState({num : nmr})
+  }
+
+  onReset = () => {;
+    this.setState({num : 0})
+  }
+
+  generateTests = () => {
+    const ind = this.state.num;
+    if(ind === 0) return <App onComplete={this.onComplete}/>;
+    if(ind === 1) return <AppOne onComplete={this.onComplete}/>;
+    if(ind === 2) return <AppTwo onComplete={this.onComplete}/>;
+    if(ind === 3) return <AppThree onComplete={this.onComplete}/>;
+    if(ind === 4) return <AppFour onComplete={this.onComplete}/>;
+    if(ind === 5) return <AppFive onComplete={this.onComplete}/>;
+    if(ind === 6) return <AppSix onComplete={this.onComplete}/>;
+    if(ind === 7) return <AppSeven onComplete={this.onComplete}/>;
+    if(ind === 8) return <AppEight onComplete={this.onComplete}/>;
+    if(ind === 9) return <AppNine onComplete={this.onComplete}/>;
+    if(ind === 10) return <AppTen onComplete={this.onComplete}/>;
+    if(ind > 10) return <AppDone onReset={this.onReset}/>;
+  }
+
+  render() {
+      window.scrollTo(0, 0);
+      return (
+       <this.generateTests/>
+      );
+    }
+}
+
+export default MainTest;
