@@ -44,7 +44,7 @@ handleScroll = event => {
         console.log("TIMER", result);
         this.handleButtonClick();
         this.testCompleted = true;
-        this.props.onComplete();        
+        this.props.onComplete();
       }
     }
 }
@@ -103,7 +103,7 @@ handleScroll = event => {
             <div className="row ScrollTestRow"><ShapeElement index={"3"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"4"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"5"}/></div>
-            <div className="row ScrollTestRow" ref={this.targetRef}><StarElement index={"6"}/></div>
+            <div className="row ScrollTestRow"><ShapeElement index={"6"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"7"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"8"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"9"}/></div>
@@ -152,7 +152,7 @@ handleScroll = event => {
             <div className="row ScrollTestRow"><ShapeElement index={"52"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"53"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"54"}/></div>
-            <div className="row ScrollTestRow"><ShapeElement index={"55"}/></div>
+            <div className="row ScrollTestRow" ref={this.targetRef}><StarElement index={"55"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"56"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"57"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"58"}/></div>

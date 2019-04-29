@@ -1,11 +1,6 @@
 import React from 'react';
 import FixedMenuVar from './FixedMenuVar';
-import _ from 'lodash';
-
 import ScrollTestStyle from './ScrollTestStyle.css'
-import LandingPad from './LandingPad'
-import ShapeElement from './ShapeElement'
-import StarElement from './StarElement'
 
 class AppDone extends React.Component {
 
@@ -31,8 +26,18 @@ class AppDone extends React.Component {
       return (
         <div>
           <FixedMenuVar onClickHandler={this.handleButtonClick} pageNum={this.state.num} ref={this.fixedMenuReference}/>
-          <div className="ScrollTest">
-
+          <div className="ScrollTest GifMargin">
+            <div className="row">
+              <div className="ui grid">
+                <div className="three column row">
+                  <div className="column"></div>
+                  <div className="column">
+                  <iframe src="https://giphy.com/embed/IcGkqdUmYLFGE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/IcGkqdUmYLFGE"></a></p>
+                  </div>
+                  <div className="tcolumn"></div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       );

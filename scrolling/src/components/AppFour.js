@@ -103,7 +103,7 @@ handleScroll = event => {
             <div className="row ScrollTestRow"><ShapeElement index={"3"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"4"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"5"}/></div>
-            <div className="row ScrollTestRow" ref={this.targetRef}><StarElement index={"6"}/></div>
+            <div className="row ScrollTestRow"><ShapeElement index={"6"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"7"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"8"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"9"}/></div>
@@ -139,7 +139,7 @@ handleScroll = event => {
             <div className="row ScrollTestRow"><ShapeElement index={"39"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"40"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"41"}/></div>
-            <div className="row ScrollTestRow"><ShapeElement index={"42"}/></div>
+            <div className="row ScrollTestRow" ref={this.targetRef}><StarElement index={"42"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"43"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"44"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"45"}/></div>
