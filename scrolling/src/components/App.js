@@ -1,5 +1,5 @@
 import React from 'react';
-import FixedMenu from './FixedMenu';
+import FixedMenuTest from './FixedMenuTest';
 import ScrollTest from './ScrollTest';
 import _ from 'lodash';
 
@@ -14,7 +14,7 @@ class App extends React.Component {
     this.fixedMenuReference = React.createRef();
 
     // Used to debounce scroll event
-    this.debounceAmount = 300;
+    this.debounceAmount = 50;
     this.onChange = this.onChange.bind(this);
     this.debouncedOnChange = _.debounce(this.debouncedOnChange.bind(this), this.debounceAmount);
 
@@ -31,11 +31,15 @@ class App extends React.Component {
 
 // Calculates Scroll Time
 handleScroll = event => {
+    // Get scroll offset
     const offset = window.pageYOffset;
     if (this.testStarted){
       const reading = (this.starPosition + (this.starHeight/2)) - offset;
+
+      // Calculate if the target is in landing pad
       if(reading <= (4*this.landingPadHeight/5) && reading >= (this.starHeight/2)){
         console.log("TEST COMPLETED", this.state.num);
+        console.log("TARGET POSITION", this.starPosition);
         this.testEndTime = Date.now();
         const result = this.testEndTime - this.testStartTime - this.debounceAmount;
         console.log("TIMER", result);
@@ -90,7 +94,7 @@ handleScroll = event => {
   render() {
       return (
         <div>
-          <FixedMenu  onClickHandler={this.handleButtonClick} pageNum={this.state.num} ref={this.fixedMenuReference}/>
+          <FixedMenuTest  onClickHandler={this.handleButtonClick} pageNum={this.state.num} ref={this.fixedMenuReference}/>
           <div className="ScrollTest">
             <ScrollTest ref={this.scrollTestReference}/>
           </div>

@@ -39,6 +39,7 @@ handleScroll = event => {
       const reading = (this.starPosition + (this.starHeight/2)) - offset;
       if(reading <= (4*this.landingPadHeight/5) && reading >= (this.starHeight/2)){
         console.log("TEST COMPLETED", this.state.num);
+        console.log("TARGET POSITION", this.starPosition);
         this.testEndTime = Date.now();
         const result = this.testEndTime - this.testStartTime - this.debounceAmount;
         console.log("TIMER", result);
@@ -132,7 +133,7 @@ handleScroll = event => {
             <div className="row ScrollTestRow"><ShapeElement index={"33"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"34"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"35"}/></div>
-            <div className="row ScrollTestRow"><ShapeElement index={"36"}/></div>
+            <div className="row ScrollTestRow" ref={this.targetRef}><StarElement index={"36"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"37"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"38"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"39"}/></div>
@@ -147,7 +148,7 @@ handleScroll = event => {
             <div className="row ScrollTestRow"><ShapeElement index={"48"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"49"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"50"}/></div>
-            <div className="row ScrollTestRow" ref={this.targetRef}><StarElement index={"51"}/></div>
+            <div className="row ScrollTestRow"><ShapeElement index={"51"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"52"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"53"}/></div>
             <div className="row ScrollTestRow"><ShapeElement index={"54"}/></div>

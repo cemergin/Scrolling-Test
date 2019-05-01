@@ -1,4 +1,4 @@
-const colors = ["#c04df9","#ff48c4", "#2bd1fc"];
+const colors = ["#33BBEE","#EE7733", "#EE3377"];
 
 export function ColorWheel(ind) {
   return (colors[ind]);
