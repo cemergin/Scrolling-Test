@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FixedMenu extends React.Component {
+class FixedMenuKnown extends React.Component {
 
   constructor(props) {
     super(props);
@@ -17,7 +17,7 @@ class FixedMenu extends React.Component {
   return (
           <div ref={this.menuRef} className="ui fixed inverted menu">
             <div className="header item"> Scrolling Test: {this.props.pageNum}</div>
-            <div className="item">Press Start and Scroll Down To Place Xs Into The Grey Area</div>
+            <div className="item">Press Start and Scroll Down To Line #{this.props.targetNum}</div>
             <div className="right menu">
               <button ref={this.buttonRef} onClick={this.props.onClickHandler} className="ui button">Click to Start</button>
             </div>
@@ -27,4 +27,4 @@ class FixedMenu extends React.Component {
 
 }
 
-export default FixedMenu;
+export default FixedMenuKnown;

@@ -1,6 +1,6 @@
 import React from 'react';
 import FixedMenuTest from './FixedMenuTest';
-import FixedMenuKnown from './FixedMenuKnown';
+import FixedMenuKnownTest from './FixedMenuKnownTest';
 import ScrollTest from './ScrollTest';
 import ScrollTestKnown from './ScrollTestKnown';
 import _ from 'lodash';
@@ -11,7 +11,7 @@ class App extends React.Component {
 //Constructor Function For App
   constructor(props) {
     super(props);
-    this.state = { num: 0 };
+    this.state = { num: 11 };
     this.scrollTestReference = React.createRef();
     this.fixedMenuReference = React.createRef();
 
@@ -96,9 +96,9 @@ handleScroll = event => {
   render() {
       return (
         <div>
-          <FixedMenuTest onClickHandler={this.handleButtonClick} targetNum={30} pageNum={this.state.num} ref={this.fixedMenuReference}/>
+          <FixedMenuKnownTest onClickHandler={this.handleButtonClick} targetNum={30}  pageNum={this.state.num} ref={this.fixedMenuReference}/>
           <div className="ScrollTest">
-            <ScrollTest ref={this.scrollTestReference}/>
+            <ScrollTestKnown ref={this.scrollTestReference}/>
           </div>
         </div>
       );
